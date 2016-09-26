@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Adventuretron</title>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="/bundle.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="choo-root" class="minidocs">
+    <div class="_2bbb10f8 minidocs-sidebar">
+    <div class="minidocs-header">
+      <h1><a href="/">Adventuretron</a></h1>
+    </div>
+    <div class="_606ae572 minidocs-contents">
+    <button class="minidocs-menu-toggle">Menu</button>
+    <div class="minidocs-menu menu-closed menu-small">
+      <div class="minidocs-menu-wrapper">
+        <div class="h1">welcome</div><div><a href="/introduction" class="content-link ">introduction</a></div><div><a href="/get-started" class="content-link ">get started</a></div><div class="h1">modules</div><div><a href="/main" class="content-link ">main</a></div><div><a href="/renderer" class="content-link active">renderer</a></div><div><a href="/html" class="content-link ">html</a></div><div><a href="/markdown" class="content-link ">markdown</a></div><div><a href="/description" class="content-link ">description</a></div><div><a href="/next" class="content-link ">next</a></div><div><a href="/verify-text" class="content-link ">verify-text</a></div><div><a href="/verify-code" class="content-link ">verify-code</a></div><div><a href="/verify-file" class="content-link ">verify-file</a></div><div><a href="/verify-directory" class="content-link ">verify-directory</a></div>
+      </div>
+    </div>
+  </div>
+  </div>
+    <div class="_571b6797 minidocs-main">
+      <div class="markdown-body">
+        <div class="_3f4b1fbc minidocs-content">
+    
+    
+    <div><h1 id="renderer">renderer</h1>
+<p>The <code>renderer</code> module is responsible for all the UI code, the app with all the challenges that users work through.</p>
+<h2 id="example-usage">Example usage</h2>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">'path'</span>)
+<span class="hljs-keyword">var</span> createApp = <span class="hljs-built_in">require</span>(<span class="hljs-string">'adventuretron/renderer'</span>)
+<span class="hljs-keyword">var</span> css = <span class="hljs-built_in">require</span>(<span class="hljs-string">'sheetify'</span>)
+
+css(<span class="hljs-string">'adventuretron'</span>)
+
+<span class="hljs-keyword">var</span> app = createApp({
+  <span class="hljs-attr">name</span>: <span class="hljs-string">'adventuretron-adventure'</span>,
+  <span class="hljs-attr">defaultLanguage</span>: <span class="hljs-string">'en'</span>,
+  <span class="hljs-attr">languages</span>: {
+    <span class="hljs-string">'en'</span>: <span class="hljs-string">'English'</span>,
+    <span class="hljs-string">'es'</span>: <span class="hljs-string">'Español'</span>
+  },
+  <span class="hljs-attr">i18n</span>: path.join(__dirname, <span class="hljs-string">'i18n'</span>),
+  <span class="hljs-attr">challenges</span>: path.join(__dirname, <span class="hljs-string">'challenges'</span>)
+})
+
+app.start()
+</code></pre>
+<p>In this example we&#39;re using <a href="https://npmjs.com/sheetify">sheetify</a> to include the basic adventuretron css styles. You can include the css using other methods, but sheetify is recommended.</p>
+</div>
+  </div>
+      </div>
+    </div>
+  </div>
+<script src="/bundle.js"></script>
+</body>
+</html>

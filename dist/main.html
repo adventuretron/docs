@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Adventuretron</title>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="/bundle.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="choo-root" class="minidocs">
+    <div class="_2bbb10f8 minidocs-sidebar">
+    <div class="minidocs-header">
+      <h1><a href="/">Adventuretron</a></h1>
+    </div>
+    <div class="_606ae572 minidocs-contents">
+    <button class="minidocs-menu-toggle">Menu</button>
+    <div class="minidocs-menu menu-closed menu-small">
+      <div class="minidocs-menu-wrapper">
+        <div class="h1">welcome</div><div><a href="/introduction" class="content-link ">introduction</a></div><div><a href="/get-started" class="content-link ">get started</a></div><div class="h1">modules</div><div><a href="/main" class="content-link active">main</a></div><div><a href="/renderer" class="content-link ">renderer</a></div><div><a href="/html" class="content-link ">html</a></div><div><a href="/markdown" class="content-link ">markdown</a></div><div><a href="/description" class="content-link ">description</a></div><div><a href="/next" class="content-link ">next</a></div><div><a href="/verify-text" class="content-link ">verify-text</a></div><div><a href="/verify-code" class="content-link ">verify-code</a></div><div><a href="/verify-file" class="content-link ">verify-file</a></div><div><a href="/verify-directory" class="content-link ">verify-directory</a></div>
+      </div>
+    </div>
+  </div>
+  </div>
+    <div class="_571b6797 minidocs-main">
+      <div class="markdown-body">
+        <div class="_3f4b1fbc minidocs-content">
+    
+    
+    <div><h1 id="main">main</h1>
+<p>The <code>main</code> module is responsible creating the main window using electron.</p>
+<h2 id="usage-example">Usage example</h2>
+<p>For most workshops, you&#39;ll create a <code>main.js</code> file that looks like this:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">'path'</span>)
+<span class="hljs-keyword">var</span> adventuretron = <span class="hljs-built_in">require</span>(<span class="hljs-string">'adventuretron/main'</span>)
+
+<span class="hljs-keyword">var</span> app = adventuretron({
+  <span class="hljs-attr">title</span>: <span class="hljs-string">'Example adventuretron workshop'</span>,
+  <span class="hljs-attr">index</span>: <span class="hljs-string">'file://'</span> + path.join(__dirname, <span class="hljs-string">'index.html'</span>)
+})
+</code></pre>
+</div>
+  </div>
+      </div>
+    </div>
+  </div>
+<script src="/bundle.js"></script>
+</body>
+</html>

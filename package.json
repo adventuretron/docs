@@ -1,0 +1,26 @@
+{
+  "name": "adventuretron-docs",
+  "version": "1.0.0",
+  "description": "Documentation for Adventuretron",
+  "main": "index.js",
+  "scripts": {
+    "build:local": "minidocs . -t Adventuretron -c contents.js -o dist --pushstate -s style.css",
+    "build:deploy": "minidocs . -t Adventuretron -c contents.js -o dist --full-html -s style.css",
+    "start": "npm run build:local && budo --dir dist --pushstate",
+    "deploy": "npm run build:deploy && staticland deploy -p dist/ -d docs.adventuretron.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adventuretron/docs.git"
+  },
+  "author": "sethvincent",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adventuretron/docs/issues"
+  },
+  "homepage": "https://github.com/adventuretron/docs#readme",
+  "devDependencies": {
+    "budo": "^9.2.0",
+    "minidocs": "github:freeman-lab/minidocs"
+  }
+}

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Adventuretron</title>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="/bundle.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="choo-root" class="minidocs">
+    <div class="_2bbb10f8 minidocs-sidebar">
+    <div class="minidocs-header">
+      <h1><a href="/">Adventuretron</a></h1>
+    </div>
+    <div class="_606ae572 minidocs-contents">
+    <button class="minidocs-menu-toggle">Menu</button>
+    <div class="minidocs-menu menu-closed menu-small">
+      <div class="minidocs-menu-wrapper">
+        <div class="h1">welcome</div><div><a href="/introduction" class="content-link ">introduction</a></div><div><a href="/get-started" class="content-link ">get started</a></div><div class="h1">modules</div><div><a href="/main" class="content-link ">main</a></div><div><a href="/renderer" class="content-link ">renderer</a></div><div><a href="/html" class="content-link ">html</a></div><div><a href="/markdown" class="content-link ">markdown</a></div><div><a href="/description" class="content-link active">description</a></div><div><a href="/next" class="content-link ">next</a></div><div><a href="/verify-text" class="content-link ">verify-text</a></div><div><a href="/verify-code" class="content-link ">verify-code</a></div><div><a href="/verify-file" class="content-link ">verify-file</a></div><div><a href="/verify-directory" class="content-link ">verify-directory</a></div>
+      </div>
+    </div>
+  </div>
+  </div>
+    <div class="_571b6797 minidocs-main">
+      <div class="markdown-body">
+        <div class="_3f4b1fbc minidocs-content">
+    
+    
+    <div><h1 id="description">description</h1>
+<p>This helper module returns the content from the description file that matches the current language of the user.</p>
+<h2 id="usage-example">Usage example</h2>
+<p><code>description</code> takes two arguments:</p>
+<ul>
+<li><code>challenge</code> – the current challenge</li>
+<li><code>lang</code> - current language of the user</li>
+</ul>
+<p>Here&#39;s how usage looks inside an Adventuretron challenge:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> html = <span class="hljs-built_in">require</span>(<span class="hljs-string">'adventuretron/html'</span>)
+<span class="hljs-keyword">var</span> description = <span class="hljs-built_in">require</span>(<span class="hljs-string">'adventuretron/description'</span>)
+
+<span class="hljs-keyword">var</span> i18n = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./i18n'</span>)
+
+<span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">i18n</span>: i18n,
+  <span class="hljs-attr">content</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">params, send</span>) </span>{
+    <span class="hljs-keyword">var</span> lang = params.language
+    <span class="hljs-keyword">var</span> challenge = params.challenge
+
+    <span class="hljs-keyword">return</span> html<span class="hljs-string">`&lt;div&gt;
+      <span class="hljs-subst">${description(challenge, lang)}</span>
+    &lt;/div&gt;`</span>
+  }
+}
+</code></pre>
+</div>
+  </div>
+      </div>
+    </div>
+  </div>
+<script src="/bundle.js"></script>
+</body>
+</html>
