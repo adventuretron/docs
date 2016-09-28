@@ -6,6 +6,17 @@ Adventuretron is a tool for creating self-guided workshops that run as desktop a
 
 We're still early in the development of Adventuretron. There are weird APIs and messy rough edges. Please let us know what makes sense, what was easy, what was challenging, and what was ridiculously wrong.
 
+## Get involved
+
+- [adventuretron.org](https://adventuretron.org)
+- [documentation](https://docs.adventuretron.org)
+- [github org](https://github.com/adventuretron)
+- [chat](https://gitter.im/adventuretron/discuss)
+
+## Code of conduct
+
+All participants in the production of Adventuretron projects are expected to follow the [code of conduct](https://github.com/adventuretron/discuss/tree/master/CONDUCT.md).
+
 ## Overview
 
 ### Features
